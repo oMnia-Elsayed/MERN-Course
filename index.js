@@ -7,4 +7,7 @@ app.get('/', (req, res) => {
     res.send({ Hi: 'Hi'});
 });
 
-app.listen(5000);
+// process.env.PORT => if there is an evn variable defined by heroku or use 5000
+const PORT = process.env.PORT || 5000; 
+
+app.listen(PORT);
